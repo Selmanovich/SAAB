@@ -91,7 +91,7 @@ void loop()
         if (rxId == 0x290) //SID keys
         {
             switch (rxBuf[3]) {
-                case 0x08:
+                case 0x08: //Night panel
                     if (DEBUGMODE) {Serial.println("Night Panel Button pressed");}
                     break;
             }
@@ -101,11 +101,11 @@ void loop()
         {
             switch (rxBuf[2])
             {
-                case 0x40:
+                case 0x40: //Left
                     if (DEBUGMODE) {Serial.println("Left Blinker");}
                     break;
                 
-                case 0x20:
+                case 0x20: //Right
                     if (DEBUGMODE) {Serial.println("Right Blinker");}
                     break;
             }
